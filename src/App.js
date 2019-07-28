@@ -1,9 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+var express = require('express');
+var app = express();
 
-function App() {
-  return res.redirect('https://www.google.com/');
-}
+app.get('/', function (req, res) {
+  res.send('Hello World!');
+});
+app.listen(443, function () {
+  console.log('Example app listening on port 3000!');
+});
 
-export default App;
